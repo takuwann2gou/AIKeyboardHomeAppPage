@@ -14,7 +14,7 @@ struct HeaderView: View {
     var body: some View {
         ZStack{
             HStack{
-                Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray)
+                Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray).frame(minWidth:40).frame(minWidth:30)
                 Text("AIキーボーßド")
                     .font(.largeTitle)
                     .fontWeight(.bold)
@@ -135,7 +135,7 @@ struct SubscribeButtons: View {
                     HStack {
                         Text("使用回数：10回/日")
                         Spacer()
-                        Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray)
+                        Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray).frame(minWidth:40).frame(minWidth:30)
                     }
                 }
                 .padding(.leading, 30)
@@ -163,7 +163,7 @@ struct SubscribeButtons: View {
                     HStack {
                         Text("使用回数：1000回/月")
                         Spacer()
-                        Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray)
+                        Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray).frame(minWidth:40).frame(minWidth:30)
                         
                     }
                     
@@ -197,7 +197,7 @@ struct SubscribeButtons: View {
                     HStack {
                         Text("使用回数：無制限/月")
                         Spacer()
-                        Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray)
+                        Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray).frame(minWidth:40).frame(minWidth:30)
                     }
                     
                     HStack {
@@ -222,7 +222,7 @@ struct TermsButtons: View {
     var body: some View {
         NavigationLink(destination: TermsView()) {
             HStack{
-                Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray)
+                Image(systemName:"doc.text").padding(.leading, 10).foregroundColor(Color.gray).frame(minWidth:40).frame(minWidth:30)
                 Text("利用規約")
                 Spacer()
             }
@@ -236,7 +236,7 @@ struct TermsButtons: View {
         
         NavigationLink(destination: PPView()) {
             HStack{
-                Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray)
+                Image(systemName:"figure.stand").padding(.leading, 10).foregroundColor(Color.gray).frame(minWidth:40).frame(minWidth:30)
                 Text("プライバシーポリシー")
                 Spacer()
             }
@@ -249,7 +249,7 @@ struct TermsButtons: View {
         
         NavigationLink(destination: LicenseView()) {
             HStack{
-                Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray)
+                Image(systemName:"point.3.filled.connected.trianglepath.dotted").padding(.leading, 10).foregroundColor(Color.gray).frame(minWidth:40).frame(minWidth:30).frame(minWidth:30)
                 Text("ライセンス表明")
                 Spacer()
             }
@@ -268,7 +268,7 @@ struct SettingButtons: View {
         Button(action: {
         }) {
             HStack{
-                Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray)
+                Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray).frame(minWidth:40).frame(minWidth:30)
                 Text("キーボードの設定")
                     
                 Spacer()
@@ -282,7 +282,7 @@ struct SettingButtons: View {
         Button(action: {
         }) {
             HStack{
-                Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray)
+                Image(systemName:"lock.open.fill").padding(.leading, 10).foregroundColor(Color.gray).frame(minWidth:40).frame(minWidth:30)
                 Text("キーボードの許可")
                     
                 Spacer()
