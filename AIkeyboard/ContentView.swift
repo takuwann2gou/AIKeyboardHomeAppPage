@@ -8,25 +8,13 @@
 import SwiftUI
 
 //VIEWの中に入れる要素群グループ
-struct ImgView:View{
-    @State private var text: String = ""
-    
-    let img:String
-    var body: some View {
-        Image("img")
-//          Text("●")
-//            .resizable()
-                    .frame(width: 25, height: 25)
-    }
-}
-
 struct HeaderView: View {
     @State private var text: String = ""
     
     var body: some View {
         ZStack{
             HStack{
-                ImgView(img:"img")
+                Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray)
                 Text("AIキーボーßド")
                     .font(.largeTitle)
                     .fontWeight(.bold)
@@ -132,7 +120,9 @@ struct SubscribeButtons: View {
             ContentsTitle(title:"利用プラン")
             
             // subscribeButtonTemp 1
-            Button(action: {}) {
+            Button(action: {
+                
+            }) {
                 VStack {
                     HStack {
                         Text("フリープラン")
@@ -145,7 +135,7 @@ struct SubscribeButtons: View {
                     HStack {
                         Text("使用回数：10回/日")
                         Spacer()
-                        ImgView(img:"")
+                        Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray)
                     }
                 }
                 .padding(.leading, 30)
@@ -173,7 +163,7 @@ struct SubscribeButtons: View {
                     HStack {
                         Text("使用回数：1000回/月")
                         Spacer()
-                        ImgView(img:"")
+                        Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray)
                         
                     }
                     
@@ -207,7 +197,7 @@ struct SubscribeButtons: View {
                     HStack {
                         Text("使用回数：無制限/月")
                         Spacer()
-                        ImgView(img:"")
+                        Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray)
                     }
                     
                     HStack {
@@ -230,10 +220,9 @@ struct TermsButtons: View {
     @State private var text: String = ""
     
     var body: some View {
-        Button(action: {
-        }) {
+        NavigationLink(destination: TermsView()) {
             HStack{
-                ImgView(img:"img").padding(.leading, 10)
+                Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray)
                 Text("利用規約")
                 Spacer()
             }
@@ -245,23 +234,22 @@ struct TermsButtons: View {
         
         Divider()
         
-        Button(action: {
-        }) {
+        NavigationLink(destination: PPView()) {
             HStack{
-                ImgView(img:"img").padding(.leading, 10)
+                Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray)
                 Text("プライバシーポリシー")
                 Spacer()
             }
         }.frame(maxWidth: .infinity, minHeight: 50)
-        .accentColor(Color.black)
-        .background(Color.white)
-        
+            .accentColor(Color.black)
+            .background(Color.white)
+    
+    
         Divider()
         
-        Button(action: {
-        }) {
+        NavigationLink(destination: LicenseView()) {
             HStack{
-                ImgView(img:"img").padding(.leading, 10)
+                Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray)
                 Text("ライセンス表明")
                 Spacer()
             }
@@ -280,7 +268,7 @@ struct SettingButtons: View {
         Button(action: {
         }) {
             HStack{
-                ImgView(img:"img").padding(.leading, 10)
+                Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray)
                 Text("キーボードの設定")
                     
                 Spacer()
@@ -294,7 +282,7 @@ struct SettingButtons: View {
         Button(action: {
         }) {
             HStack{
-                ImgView(img:"img").padding(.leading, 10)
+                Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray)
                 Text("キーボードの許可")
                     
                 Spacer()
@@ -310,29 +298,32 @@ struct ContentView: View {
     @State private var text: String = ""
     
     var body: some View {
-        VStack (spacing : 0) {
-            
-            HeaderView()
-            ScrollView(.vertical,showsIndicators: false){
-                VStack (spacing : 0) {
-                    
-                    
-                    NoticeView()
-                    
-                    SubscribeButtons()
-                    
-                    Spacer(minLength: 10)
-                    
-                    TermsButtons()
-                    
-                    SettingButtons()
-                    
-                    Text("あいうえお柿くけこ").padding(30)
-                        .font(.caption2)
-                }
-            }.background(Color(red: 0.851, green: 0.851, blue: 0.851))
-        }
-    }
+        NavigationView {
+            VStack (spacing : 0) {
+                
+                HeaderView()
+                ScrollView(.vertical,showsIndicators: false){
+                    VStack (spacing : 0) {
+                        
+                        
+                        NoticeView()
+                        
+                        SubscribeButtons()
+                        
+                        Spacer(minLength: 10)
+                        
+                        TermsButtons()
+                        
+                        SettingButtons()
+                        
+                        Text("あいうえお柿くけこ").padding(30)
+                            .font(.caption2)
+                        
+                    }
+                    }
+                }.background(Color(red: 0.851, green: 0.851, blue: 0.851))
+            }}
+
 }
 
 
