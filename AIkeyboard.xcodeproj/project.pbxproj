@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7552586529BF47A200C13408 /* Term.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7552586429BF425400C13408 /* Term.txt */; };
+		7552586729BF4B9600C13408 /* PP.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7552586629BF4B9600C13408 /* PP.txt */; };
+		7552586B29BF4CA000C13408 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7552586A29BF4CA000C13408 /* License.txt */; };
 		758AAE8329BDBEB1007BDAA4 /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758AAE8229BDBEB1007BDAA4 /* DocumentView.swift */; };
 		7596923329BDA2FD00BC6A23 /* AIkeyboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7596923229BDA2FD00BC6A23 /* AIkeyboardApp.swift */; };
 		7596923529BDA2FD00BC6A23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7596923429BDA2FD00BC6A23 /* ContentView.swift */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7552586429BF425400C13408 /* Term.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Term.txt; sourceTree = "<group>"; };
+		7552586629BF4B9600C13408 /* PP.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PP.txt; sourceTree = "<group>"; };
+		7552586A29BF4CA000C13408 /* License.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		758AAE8229BDBEB1007BDAA4 /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
 		7596922F29BDA2FD00BC6A23 /* AIkeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIkeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7596923229BDA2FD00BC6A23 /* AIkeyboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIkeyboardApp.swift; sourceTree = "<group>"; };
@@ -98,6 +104,9 @@
 			children = (
 				7596923229BDA2FD00BC6A23 /* AIkeyboardApp.swift */,
 				7596923429BDA2FD00BC6A23 /* ContentView.swift */,
+				7552586429BF425400C13408 /* Term.txt */,
+				7552586A29BF4CA000C13408 /* License.txt */,
+				7552586629BF4B9600C13408 /* PP.txt */,
 				758AAE8229BDBEB1007BDAA4 /* DocumentView.swift */,
 				7596923629BDA2FF00BC6A23 /* Assets.xcassets */,
 				7596923829BDA2FF00BC6A23 /* Preview Content */,
@@ -234,6 +243,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7552586729BF4B9600C13408 /* PP.txt in Resources */,
+				7552586B29BF4CA000C13408 /* License.txt in Resources */,
+				7552586529BF47A200C13408 /* Term.txt in Resources */,
 				7596923A29BDA2FF00BC6A23 /* Preview Assets.xcassets in Resources */,
 				7596923729BDA2FF00BC6A23 /* Assets.xcassets in Resources */,
 			);

@@ -8,31 +8,54 @@
 import SwiftUI
 
 struct DocumentTemp: View{
-    let title:String
-    let document:String
+    @State private var fileContent = "None"
+    let title: String
+    let document: String
+    
     var body: some View {
-        VStack {
-            Text(title).font(.title3).padding(30)
-            Text(document).font(.caption)
-            Spacer()
-        }
+        ScrollView(.vertical,showsIndicators: true){
+            VStack {
+                
+                Text(title).font(.title3).padding(.bottom,30)
+                Text(fileContent).font(.caption)
+                Spacer()
+            }.padding(30)
+                .onAppear {
+                    loadFile()
+                }
+        }}
+            private func loadFile() {
+                if let fileURL = Bundle.main.url(forResource: document, withExtension: "txt") {
+                    do {
+                        fileContent = try String(contentsOf: fileURL)
+                    } catch {
+                        fileContent = "File is Null"
+                        print("Error loading file: \(error)")
+                    }
+                
+            }
+        
     }
 }
-
 
 struct TermsView: View {
+    
+    
     var body: some View {
         VStack {
-            DocumentTemp(title:"利用規約",document:"これはあーだこーだ")
+            DocumentTemp(title:"利用規約", document: "Term")
         }
         .navigationTitle("")
+        
+        
+        
+        
     }
 }
-
 struct PPView: View {
     var body: some View {
         VStack {
-            DocumentTemp(title:"プライバシーポリシー",document:"これはあーだこーだ")
+            DocumentTemp(title:"プライバシーポリシー",document:"PP")
         }
         .navigationTitle("")
     }
@@ -41,7 +64,7 @@ struct PPView: View {
 struct LicenseView: View {
     var body: some View {
         VStack {
-            DocumentTemp(title:"ライセンス表明",document:"これはあーだこーだ")
+            DocumentTemp(title:"ライセンス表明",document:"License")
         }
         .navigationTitle("")
     }

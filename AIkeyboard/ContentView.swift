@@ -266,6 +266,10 @@ struct SettingButtons: View {
         ContentsTitle(title:"初期設定項目")
         
         Button(action: {
+            let url = URL(string: "App-Prefs:root=General&path=Keyboard/KEYBOARDS/AddNewKeyboard")
+            if UIApplication.shared.canOpenURL(url!) {
+                UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+            }
         }) {
             HStack{
                 Image(systemName:"keyboard").padding(.leading, 10).foregroundColor(Color.gray).frame(minWidth:40).frame(minWidth:30)
@@ -279,7 +283,12 @@ struct SettingButtons: View {
         
         Divider()
         
+//        ここにキーボードのIDを追加して
         Button(action: {
+            let url = URL(string: "App-Prefs:root=General&path=Keyboard/KEYBOARDS/[YOUR KEYBOARD ID HERE]")
+            if UIApplication.shared.canOpenURL(url!) {
+                UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+            }
         }) {
             HStack{
                 Image(systemName:"lock.open.fill").padding(.leading, 10).foregroundColor(Color.gray).frame(minWidth:40).frame(minWidth:30)
@@ -319,6 +328,7 @@ struct ContentView: View {
                         Text("あいうえお柿くけこ").padding(30)
                             .font(.caption2)
                         
+
                     }
                     }
                 }.background(Color(red: 0.851, green: 0.851, blue: 0.851))
